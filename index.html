@@ -1,111 +1,214 @@
-<html lang="ea">
+<!DOCTYPE html>
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="css/style.css"
+    <title>Inicio de Sesión</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #d3d3d3;
+            /* Gris claro para el fondo */
+            color: #000000;
+            /* Texto en negro */
+        }
+
+        header {
+            background-color: #4b4b4b;
+            /* Gris oscuro para el header */
+            color: #ffffff;
+            /* Texto blanco en el header */
+        }
+
+        footer {
+            background-color: #4b4b4b;
+            /* Gris oscuro para el footer */
+            color: #ffffff;
+            /* Texto blanco en el footer */
+        }
+
+        .btn-primary {
+            background-color: #808080;
+            /* Gris ratón para el botón */
+            border-color: #808080;
+        }
+
+        .btn-primary:hover {
+            background-color: #696969;
+            /* Gris más oscuro al pasar el ratón */
+        }
+
+        .modal-content {
+            background-color: #e0e0e0;
+            /* Fondo gris claro para el modal */
+            color: #000000;
+            /* Texto en negro para el modal */
+        }
+
+        .form-control,
+        .form-select {
+            border: 2px solid #b0b0b0;
+            /* Bordes en gris claro */
+        }
+
+        .form-label {
+            color: #000000;
+            /* Etiquetas en negro */
+        }
+
+        .bg-light {
+            background-color: #e0e0e0 !important;
+            /* Fondo gris claro para el formulario */
+        }
+    </style>
 </head>
 
-<body>
-    <img src="c:\Users\Aprendiz\Documents\Nueva carpeta\images.jpg" class="rounded" alt="">
+<body class="d-flex flex-column min-vh-100">
+    <header class="py-3 text-center">
+        <h1>ElectroMovil</h1>
+    </header>
 
-    <div class="container">
-        <h1>Electroomovil</h1>
-        <p>en esta pagina encontraras la solucion para tus problemas con los electrodomesticos</p>
-      </div> 
-      <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Botón Bootstrap</title>
-        <!-- Incluye Bootstrap CSS desde la CDN -->
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    </head>
-    <body>
-        <div class="container mt-5">
-            <button type="button" class="btn btn-primary">
-             agendar visita técnica
-            </button>
+    <main class="container d-flex justify-content-center align-items-center flex-grow-1 my-5">
+        <div class="col-md-8 col-lg-6 p-4 bg-light rounded shadow-sm">
+            <h2 class="text-center mb-4" style="color: #000000;">Iniciar Sesión</h2>
+            <form action="file:///C:/Users/Lenovo/OneDrive/Documentos/SENA/Electromovil/index.html#" method="get">
+                <div class="form-group mb-4">
+                    <label for="email" class="form-label" style="color: #000000;">Correo Electrónico</label>
+                    <input type="email" class="form-control border-2 border-dark" id="email"
+                        placeholder="Introduce tu correo" required>
+                </div>
+                <div class="form-group mb-4">
+                    <label for="password" class="form-label" style="color: #000000;">Contraseña</label>
+                    <input type="password" class="form-control border-2 border-dark" id="password"
+                        placeholder="Introduce tu contraseña" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100"
+                    style="background-color: #808080; border-color: #808080;">Iniciar Sesión</button>
+                <div class="text-center mt-3">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#registerModal" style="color: #000000;">¿No
+                        tienes cuenta? Regístrate aquí</a>
+                </div>
+            </form>
         </div>
-        <!-- Incluye Bootstrap JS y Popper.js desde la CDN -->
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    </body>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Menú Desplegable con Bootstrap</title>
-        <!-- Incluye Bootstrap CSS desde la CDN -->
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-        <style>
-            .sidebar {
-                height: 100vh;
-                width: 250px;
-                position: fixed;
-                top: 0;
-                left: 0;
-                background-color: #3c435a;
-                color: rgba(255, 255, 255, 0.439);
-                padding: 20px;
-            }
-            .sidebar .nav-link {
-                color: white;
-            }
-            .sidebar .nav-link:hover {
-                background-color: #ffffff;
-            }
-            .content {
-                margin-left: 250px; /* Asegura que el contenido no se superponga al menú */
-                padding: 20px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="sidebar">
-            <h2>Menú</h2>
-            <ul class="nav flex-column">
-                <li class="nav-item">
-                    <a class="nav-link active" href="#">Inicio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Sobre Nosotros</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-bs-toggle="collapse" href="#services" role="button" aria-expanded="false" aria-controls="services">
-                        Servicios ▼
-                    </a>
-                    <div class="collapse" id="services">
-                        <ul class="nav flex-column ms-3">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Servicio 1</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Servicio 2</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Servicio 3</a>
-                            </li>
-                        </ul>
+    </main>
+    <!-- Modal para Registro -->
+    <!-- Modal con pestañas para Registro Usuario y Registro Técnico -->
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content" style="background-color: #d3d3d3; color: #000000;">
+                <div class="modal-header" style="background-color: #808080; color: #ffffff;">
+                    <h5 class="modal-title" id="registerModalLabel">Registro</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Pestañas (tabs) -->
+                    <ul class="nav nav-tabs" id="registerTabs" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="usuario-tab" data-bs-toggle="tab" href="#usuario" role="tab"
+                                aria-controls="usuario" aria-selected="true">Registro Usuario</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="tecnico-tab" data-bs-toggle="tab" href="#tecnico" role="tab"
+                                aria-controls="tecnico" aria-selected="false">Registro Técnico</a>
+                        </li>
+                    </ul>
+
+                    <!-- Contenido de las pestañas -->
+                    <div class="tab-content mt-3">
+                        <!-- Formulario Registro Usuario -->
+                        <div class="tab-pane fade show active" id="usuario" role="tabpanel"
+                            aria-labelledby="usuario-tab">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="registerEmail" class="form-label" style="color: #000000;">Correo
+                                        Electrónico</label>
+                                    <input type="email" class="form-control" id="registerEmail"
+                                        placeholder="Introduce tu correo" style="border-color: #b0b0b0;" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="registerPassword" class="form-label"
+                                        style="color: #000000;">Contraseña</label>
+                                    <input type="password" class="form-control" id="registerPassword"
+                                        placeholder="Introduce tu contraseña" style="border-color: #b0b0b0;" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="registerConfirmPassword" class="form-label"
+                                        style="color: #000000;">Confirma tu Contraseña</label>
+                                    <input type="password" class="form-control" id="registerConfirmPassword"
+                                        placeholder="Confirma tu contraseña" style="border-color: #b0b0b0;" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100"
+                                    style="background-color: #808080; border-color: #808080;">Registrarse</button>
+                            </form>
+                        </div>
+
+                        <!-- Formulario Registro Técnico -->
+                        <div class="tab-pane fade" id="tecnico" role="tabpanel" aria-labelledby="tecnico-tab">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="registerTechEmail" class="form-label" style="color: #000000;">Correo
+                                        Electrónico</label>
+                                    <input type="email" class="form-control" id="registerTechEmail"
+                                        placeholder="Introduce tu correo" style="border-color: #b0b0b0;" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="registerTechPassword" class="form-label"
+                                        style="color: #000000;">Contraseña</label>
+                                    <input type="password" class="form-control" id="registerTechPassword"
+                                        placeholder="Introduce tu contraseña" style="border-color: #b0b0b0;" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="registerTechConfirmPassword" class="form-label"
+                                        style="color: #000000;">Confirma tu Contraseña</label>
+                                    <input type="password" class="form-control" id="registerTechConfirmPassword"
+                                        placeholder="Confirma tu contraseña" style="border-color: #b0b0b0;" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="techCert" class="form-label" style="color: #000000;">Adjuntar
+                                        Certificados de Estudios</label>
+                                    <input type="file" class="form-control" id="techCert" accept=".pdf,.jpg,.png,.docx"
+                                        required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="techExp" class="form-label" style="color: #000000;">Adjuntar Experiencia
+                                        Laboral</label>
+                                    <input type="file" class="form-control" id="techExp" accept=".pdf,.jpg,.png,.docx"
+                                        required>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100"
+                                    style="background-color: #808080; border-color: #808080;">Registrarse</button>
+                            </form>
+                        </div>
                     </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contacto</a>
-                </li>
-            </ul>
+                </div>
+            </div>
         </div>
-    
-       
-    
-        <!-- Incluye Bootstrap JS y Popper.js desde la CDN -->
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
-    </body>
-    </html>
-    
-    
-    <nav class="nav"></nav>
-    <section class="banner"></section>
-    <section class="article"></section>
-    <footer class="footer"></footer>
+    </div>
+
+    <!-- Script de Bootstrap para habilitar las pestañas -->
+    <script>
+        var triggerTabList = [].slice.call(document.querySelectorAll('#registerTabs a'))
+        triggerTabList.forEach(function (triggerEl) {
+            var tabTrigger = new bootstrap.Tab(triggerEl)
+
+            triggerEl.addEventListener('click', function (event) {
+                event.preventDefault()
+                tabTrigger.show()
+            })
+        })
+    </script>
+
+
+
+    <footer class="text-center py-3 mt-auto">
+        <p>&copy; 2024 ElectroMovil. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
