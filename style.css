@@ -1,0 +1,169 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #7c7c7c;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #333; /* Color de fondo del encabezado */
+    color: white; /* Color del texto del encabezado */
+}
+
+.header h1 {
+    margin: 0;
+}
+
+/* Estilos para los botones */
+.header .btn {
+    margin-left: 0.5rem; /* Espacio entre los botones */
+    margin-right: 0.5rem; /* Espacio entre los botones */
+    padding: 0.5rem 1rem; /* Tamaño del padding del botón */
+    font-size: 0.875rem; /* Tamaño del texto del botón */
+    border-radius: 100rem; /* Bordes redondeados */
+    border: 1px solid transparent; /* Bordes invisibles */
+    transition: all 0.3s ease; /* Transición suave para todos los cambios */
+    display: inline-flex; /* Asegura que el contenido se alinee correctamente */
+    align-items: center; /* Alinea verticalmente el texto */
+    justify-content: flex-start; /* Alinea horizontalmente el texto a la izquierda */
+    text-align: left; /* Alinea el texto a la izquierda dentro del botón */
+    white-space: nowrap; /* Evita que el texto se envuelva en varias líneas */
+    width: 100%; /* Asegura que los botones tengan el mismo ancho si están en un contenedor con ancho definido */
+    box-sizing: border-box; /* Incluye el padding y el borde en el tamaño total del botón */
+}
+
+/* Estilos personalizados para el botón */
+.header .btn-custom {
+    background-color: #6c757d; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    border-color: #6c757d; /* Color del borde del botón */
+}
+
+.header .btn-custom:hover {
+    background-color: #5a6268; /* Color de fondo al pasar el ratón */
+    border-color: #545b62; /* Color del borde al pasar el ratón */
+}
+
+.header .btn-custom:focus, .header .btn-custom:active {
+    box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.2); /* Sombra del botón para el enfoque y activación */
+}
+
+
+header {
+    background-color: #ffffff;
+    color: #858585;
+    padding: 1rem 0;
+    text-align: left;
+}
+
+header h1 {
+    margin: 0;
+    text-align: rigth;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #949494;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 2rem 0;
+}
+
+section {
+    background-color: #fff;
+    padding: 2rem;
+    margin: 1rem 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-top: 0;
+}
+
+.service-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.service-item {
+    background-color: #b4b4b4;
+    padding: 1rem;
+    margin: 0.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgb(155, 155, 155);
+    flex: 1 1 30%;
+}
+
+form {
+    display: grid;
+    gap: 1rem;
+}
+
+form label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    padding: 0.75rem;
+    border: 1px solid #666666;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.header {
+    width: 40%;
+    margin: 10; /* Sin margen automático para centrar */
+    text-align: left; /* Alinea el contenido del .header a la izquierda */
+}
+
+header {
+    background-color: #333;
+    color: #ffffff;
+    padding: 1rem 0;
+    text-align: rigth;
+}   
