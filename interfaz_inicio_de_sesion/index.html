@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElectroMovil</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        .nav-links a, .btn {
+            margin-left: 1rem;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .nav-links a {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .nav-links a:hover {
+            color: #3498db;
+        }
+
+        .btn {
+            color: white;
+            background-color: #3498db;
+        }
+
+        .btn:hover {
+            background-color: #2980b9;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #3498db, #2c3e50);
+            color: white;
+            padding: 8rem 0 6rem;
+            text-align: center;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #ecf0f1;
+            margin: 0 auto 2rem;
+            max-width: 600px;
+        }
+
+        .section {
+            padding: 6rem 0;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .contacto {
+            background: linear-gradient(135deg, #3498db, #2c3e50);
+            color: white;
+            text-align: center;
+            clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        footer a {
+            color: #3498db;
+            text-decoration: none;
+            margin: 0 1rem;
+        }
+
+        footer a:hover {
+            color: #e74c3c;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1001;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 2rem;
+            margin: 10% auto;
+            border-radius: 10px;
+            max-width: 400px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .close {
+            float: right;
+            font-size: 28px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .close:hover {
+            color: #e74c3c;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="container">
+            <a href="#" class="logo">ElectroMovil</a>
+            <div class="nav-links">
+                <a href="#servicios">Servicios</a>
+                <a href="#porque-elegirnos">Por qué elegirnos</a>
+                <a href="#contacto">Contacto</a>
+                <button class="btn" onclick="openModal()">Entrar</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Título Principal</h1>
+                <p>Texto descriptivo.</p>
+                <a href="#" class="btn">Botón de Acción</a>
+                <a href="#" class="btn btn-outline">Más Información</a>
+            </div>
+        </section>
+
+        <section id="servicios" class="section">
+            <div class="container">
+                <h2>Título de la Sección</h2>
+                <div class="grid">
+                    <div class="card">
+                        <h3>Título de la Tarjeta</h3>
+                        <p>Texto descriptivo.</p>
+                        <img src="URL_DE_LA_IMAGEN" alt="Descripción de la imagen">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="contacto section">
+            <div class="container">
+                <h2>Sección de Contacto</h2>
+                <p>Texto de contacto aquí.</p>
+                <a href="#" class="btn">Botón de Contacto</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 ElectroMovil. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Iniciar Sesión</h2>
+            <form>
+                <label for="email-usuario">Email:</label>
+                <input type="email" id="email-usuario" name="email" required>
+                <label for="password-usuario">Contraseña:</label>
+                <input type="password" id="password-usuario" name="password" required>
+                <input type="submit" value="Iniciar Sesión" class="btn">
+            </form>
+        </div>
+    </div>
+
+    <script>
+        var modal = document.getElementById("loginModal");
+        function openModal() { modal.style.display = "block"; }
+        function closeModal() { modal.style.display = "none"; }
+        window.onclick = function (event) { if (event.target == modal) { closeModal(); } }
+    </script>
+</body>
+
+</html>
